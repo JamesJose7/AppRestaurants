@@ -1,0 +1,367 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.example.agua.pedidosrestaurantes.ui.Presentar">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="No Pedido"
+        android:id="@+id/numeroPedido"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/numeroPedido"
+        android:layout_marginTop="5dp">
+
+    <!--Form-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:id="@+id/firstForm"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:text="Nombre:"
+            android:layout_weight="70"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombrePresentar"
+            android:textSize="15sp"
+            android:layout_weight="30"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:text="Cédula:"
+            android:layout_weight="70"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cedulaPresentar"
+            android:textSize="15sp"
+            android:layout_weight="30"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:text="Fecha:"
+            android:layout_weight="70"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fechaPresentar"
+            android:textSize="15sp"
+            android:layout_weight="30"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:text="Mesa:"
+            android:layout_weight="70"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mesaPresentar"
+            android:textSize="15sp"
+            android:layout_weight="30"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_horizontal"
+                    android:text="Item"
+                    android:textStyle="bold"
+                    android:layout_weight="34"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_horizontal"
+                    android:text="Precio"
+                    android:textStyle="bold"
+                    android:layout_weight="33"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_horizontal"
+                    android:text="Cantidad"
+                    android:textStyle="bold"
+                    android:layout_weight="33"/>
+            </LinearLayout>
+
+            <!--Form-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Item 1:"
+                    android:layout_weight="34"
+                    android:id="@+id/item1Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/precio1Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/cantidad1Presentar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Item 2:"
+                    android:layout_weight="34"
+                    android:id="@+id/item2Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/precio2Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/cantidad2Presentar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Item 3:"
+                    android:layout_weight="34"
+                    android:id="@+id/item3Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/precio3Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/cantidad3Presentar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Item 4:"
+                    android:layout_weight="34"
+                    android:id="@+id/item4Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/precio4Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/cantidad4Presentar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Item 5:"
+                    android:layout_weight="34"
+                    android:id="@+id/item5Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/precio5Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/cantidad5Presentar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Item 6:"
+                    android:layout_weight="34"
+                    android:id="@+id/item6Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/precio6Presentar"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="33"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/cantidad6Presentar"/>
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

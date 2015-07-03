@@ -1,0 +1,457 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.example.agua.pedidosrestaurantes.ui.Restaurante1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pedidos"
+        android:textStyle="bold"
+        android:id="@+id/title"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/pedirButton"
+        android:text="Pedir"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:layout_below="@id/title"
+        android:layout_above="@id/pedirButton"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Form-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:id="@+id/firstForm"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Nombre:"
+                    android:layout_weight="70"
+                    android:id="@+id/nombreText"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="30"
+                    android:id="@+id/nombre"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Cédula:"
+                    android:layout_weight="70"
+                    android:id="@+id/cedulaText"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="30"
+                    android:id="@+id/cedula"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Fecha:"
+                    android:layout_weight="70"
+                    android:id="@+id/fechaText"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="30"
+                    android:id="@+id/fecha"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Mesa:"
+                    android:layout_weight="70"
+                    android:id="@+id/mesaText"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="30"
+                    android:id="@+id/mesa"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Número:"
+                    android:layout_weight="70"
+                    android:id="@+id/numeroText"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="30"
+                    android:id="@+id/numero"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Item"
+                    android:textStyle="bold"
+                    android:layout_weight="34"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Cantidad"
+                    android:textStyle="bold"
+                    android:layout_weight="34"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Comentario"
+                    android:textStyle="bold"
+                    android:layout_weight="34"/>
+            </LinearLayout>
+
+            <!--Form-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Papas:"
+                    android:layout_weight="34"
+                    android:id="@+id/item1"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:layout_weight="33"
+                    android:id="@+id/cantidad1"
+                    android:gravity="center_horizontal"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="33"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Pizza:"
+                    android:layout_weight="34"
+                    android:id="@+id/item2"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:layout_weight="33"
+                    android:id="@+id/cantidad2"
+                    android:gravity="center_horizontal"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="33"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Hamburguesa:"
+                    android:layout_weight="34"
+                    android:id="@+id/item3"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:layout_weight="33"
+                    android:id="@+id/cantidad3"
+                    android:gravity="center_horizontal"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="33"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Colas:"
+                    android:layout_weight="34"
+                    android:id="@+id/item4"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:layout_weight="33"
+                    android:id="@+id/cantidad4"
+                    android:gravity="center_horizontal"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="33"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Jugos:"
+                    android:layout_weight="34"
+                    android:id="@+id/item5"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:layout_weight="33"
+                    android:id="@+id/cantidad5"
+                    android:gravity="center_horizontal"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="33"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:text="Batidos:"
+                    android:layout_weight="34"
+                    android:id="@+id/item6"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:layout_weight="33"
+                    android:id="@+id/cantidad6"
+                    android:gravity="center_horizontal"/>
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:layout_weight="33"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
