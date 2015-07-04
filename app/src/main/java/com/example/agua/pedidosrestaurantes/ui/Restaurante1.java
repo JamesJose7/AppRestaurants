@@ -15,6 +15,15 @@ import com.example.agua.pedidosrestaurantes.controller.Pedido;
 
 public class Restaurante1 extends ActionBarActivity {
 
+    private final double[] PRECIOS_R1 = {
+            1,
+            1.25,
+            1.5,
+            0.5,
+            1,
+            1.25
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +31,7 @@ public class Restaurante1 extends ActionBarActivity {
         setContentView(R.layout.activity_restaurante1);
 
 
-
+        setTitle("Comida rapida las pitas");
 
         Button pedirButton = (Button) findViewById(R.id.pedirButton);
         pedirButton.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +101,7 @@ public class Restaurante1 extends ActionBarActivity {
 
 
                 Pedido pedido = new Pedido(numero, nombre, cedula, fecha, mesa, item1,
-                        cantidad1, item2, cantidad2, item3, cantidad3, item4, cantidad4, item5, cantidad5, item6, cantidad6);
+                        cantidad1, item2, cantidad2, item3, cantidad3, item4, cantidad4, item5, cantidad5, item6, cantidad6, PRECIOS_R1);
 
                 startPresentarActivity(pedido);
             }

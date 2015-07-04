@@ -25,6 +25,8 @@ public class Pedido implements Parcelable {
     private int mCantidad5;
     private String mItem6;
 
+    private double[] mPrecios;
+
 
     public Pedido(String nombre, int cedula, String fecha, int mesa) {
         mNombre = nombre;
@@ -34,7 +36,7 @@ public class Pedido implements Parcelable {
     }
 
     public Pedido(int numero, String nombre, int cedula, String fecha, int mesa, String item1, int cantidad1, String item2,
-                  int cantidad2, String item3, int cantidad3, String item4, int cantidad4, String item5, int cantidad5, String item6, int cantidad6) {
+                  int cantidad2, String item3, int cantidad3, String item4, int cantidad4, String item5, int cantidad5, String item6, int cantidad6, double[] precios) {
         mNumero = numero;
         mNombre = nombre;
         mCedula = cedula;
@@ -52,6 +54,7 @@ public class Pedido implements Parcelable {
         mCantidad5 = cantidad5;
         mItem6 = item6;
         mCantidad6 = cantidad6;
+        mPrecios = precios;
     }
 
 
@@ -77,6 +80,7 @@ public class Pedido implements Parcelable {
         out.writeInt(mCantidad5);
         out.writeString(mItem6);
         out.writeInt(mCantidad6);
+        out.writeDoubleArray(mPrecios);
     }
 
     public static final Parcelable.Creator<Pedido> CREATOR = new Parcelable.Creator<Pedido>() {
@@ -107,6 +111,15 @@ public class Pedido implements Parcelable {
         mCantidad5 = in.readInt();
         mItem6 = in.readString();
         mCantidad6 = in.readInt();
+        mPrecios = in.createDoubleArray();
+    }
+
+    public double[] getPrecios() {
+        return mPrecios;
+    }
+
+    public void setPrecios(double[] precios) {
+        mPrecios = precios;
     }
 
     public int getNumero() {

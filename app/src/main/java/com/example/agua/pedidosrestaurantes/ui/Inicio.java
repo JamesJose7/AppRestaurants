@@ -27,6 +27,8 @@ public class Inicio extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inicio);
 
+        setTitle("Pedidos");
+
         mPedidosButton = (Button) findViewById(R.id.pedidosButton);
         mInputCodigo = (EditText) findViewById(R.id.codigoEditText);
 

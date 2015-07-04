@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pedidos"
+        android:text="Comida rapida las pitas"
         android:textStyle="bold"
         android:id="@+id/title"
         android:textSize="30sp"
@@ -93,7 +93,7 @@
                     android:paddingTop="1dp"
                     android:paddingBottom="10dp"
                     android:textSize="15sp"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:layout_weight="30"
                     android:id="@+id/cedula"/>
             </LinearLayout>
@@ -119,7 +119,7 @@
                     android:paddingTop="1dp"
                     android:paddingBottom="10dp"
                     android:textSize="15sp"
-                    android:inputType="text"
+                    android:inputType="date"
                     android:layout_weight="30"
                     android:id="@+id/fecha"/>
             </LinearLayout>
@@ -144,9 +144,9 @@
                     android:paddingTop="1dp"
                     android:paddingBottom="10dp"
                     android:textSize="15sp"
-                    android:inputType="text"
                     android:layout_weight="30"
-                    android:id="@+id/mesa"/>
+                    android:id="@+id/mesa"
+                    android:inputType="number"/>
             </LinearLayout>
 
             <LinearLayout
@@ -170,9 +170,9 @@
                     android:paddingTop="1dp"
                     android:paddingBottom="10dp"
                     android:textSize="15sp"
-                    android:inputType="text"
                     android:layout_weight="30"
-                    android:id="@+id/numero"/>
+                    android:id="@+id/numero"
+                    android:inputType="number"/>
             </LinearLayout>
 
 

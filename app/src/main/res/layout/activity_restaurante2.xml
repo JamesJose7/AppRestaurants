@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pedidos"
+        android:text="Cafetería París"
         android:textStyle="bold"
         android:id="@+id/title"
         android:layout_centerHorizontal="true"
@@ -92,9 +92,9 @@
                         android:paddingTop="1dp"
                         android:paddingBottom="10dp"
                         android:textSize="15sp"
-                        android:inputType="text"
                         android:layout_weight="30"
-                        android:id="@+id/cedula"/>
+                        android:id="@+id/cedula"
+                        android:inputType="number"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -118,7 +118,7 @@
                         android:paddingTop="1dp"
                         android:paddingBottom="10dp"
                         android:textSize="15sp"
-                        android:inputType="text"
+                        android:inputType="date"
                         android:layout_weight="30"
                         android:id="@+id/fecha"/>
                 </LinearLayout>
@@ -143,9 +143,9 @@
                         android:paddingTop="1dp"
                         android:paddingBottom="10dp"
                         android:textSize="15sp"
-                        android:inputType="text"
                         android:layout_weight="30"
-                        android:id="@+id/mesa"/>
+                        android:id="@+id/mesa"
+                        android:inputType="number"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -169,7 +169,7 @@
                         android:paddingTop="1dp"
                         android:paddingBottom="10dp"
                         android:textSize="15sp"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:layout_weight="30"
                         android:id="@+id/numero"/>
                 </LinearLayout>

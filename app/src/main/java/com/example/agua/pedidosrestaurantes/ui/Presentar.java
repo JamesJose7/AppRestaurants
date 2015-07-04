@@ -19,6 +19,8 @@ public class Presentar extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presentar);
 
+        setTitle("Resumen pedido");
+
         TextView numero = (TextView) findViewById(R.id.numeroPedido);
         TextView nombre = (TextView) findViewById(R.id.nombrePresentar);
         TextView cedula = (TextView) findViewById(R.id.cedulaPresentar);
@@ -33,7 +35,13 @@ public class Presentar extends ActionBarActivity {
         TextView item5 = (TextView) findViewById(R.id.item5Presentar);
         TextView item6 = (TextView) findViewById(R.id.item6Presentar);
 
-        //EditTexts
+        TextView precio1 = (TextView) findViewById(R.id.precio1Presentar);
+        TextView precio2 = (TextView) findViewById(R.id.precio2Presentar);
+        TextView precio3 = (TextView) findViewById(R.id.precio3Presentar);
+        TextView precio4 = (TextView) findViewById(R.id.precio4Presentar);
+        TextView precio5 = (TextView) findViewById(R.id.precio5Presentar);
+        TextView precio6 = (TextView) findViewById(R.id.precio6Presentar);
+
         TextView cantidad1 = (TextView) findViewById(R.id.cantidad1Presentar);
         TextView cantidad2 = (TextView) findViewById(R.id.cantidad2Presentar);
         TextView cantidad3 = (TextView) findViewById(R.id.cantidad3Presentar);
@@ -44,13 +52,14 @@ public class Presentar extends ActionBarActivity {
         Intent intent = getIntent();
         Pedido pedido = intent.getParcelableExtra("pedido");
 
+        //Presentar
+
         numero.setText("Pedido #" + pedido.getNumero());
         nombre.setText(pedido.getNombre());
         cedula.setText(pedido.getCedula() + "");
         fecha.setText(pedido.getFecha());
         mesa.setText(pedido.getMesa() + "");
 
-        //Presentar
         item1.setText(pedido.getItem1());
         item2.setText(pedido.getItem2());
         item3.setText(pedido.getItem3());
@@ -65,7 +74,12 @@ public class Presentar extends ActionBarActivity {
         cantidad5.setText(pedido.getCantidad5() + "");
         cantidad6.setText(pedido.getCantidad6() + "");
 
-
+        precio1.setText("$ " + pedido.getPrecios()[0] * pedido.getCantidad1());
+        precio2.setText("$ " + pedido.getPrecios()[1] * pedido.getCantidad2());
+        precio3.setText("$ " + pedido.getPrecios()[2] * pedido.getCantidad3());
+        precio4.setText("$ " + pedido.getPrecios()[3] * pedido.getCantidad4());
+        precio5.setText("$ " + pedido.getPrecios()[4] * pedido.getCantidad5());
+        precio6.setText("$ " + pedido.getPrecios()[5] * pedido.getCantidad6());
     }
 
 

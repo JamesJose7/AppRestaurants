@@ -18,7 +18,11 @@
         </activity>
         <activity
             android:name=".ui.Presentar"
-            android:label="@string/title_activity_presentar">
+            android:label="@string/title_activity_presentar"
+            android:parentActivityName=".ui.Inicio" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.agua.pedidosrestaurantes.ui.Inicio" />
         </activity>
         <activity
             android:name=".ui.Restaurante2"
