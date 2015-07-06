@@ -5,8 +5,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.agua.pedidosrestaurantes.R;
 import com.example.agua.pedidosrestaurantes.controller.Pedido;
@@ -20,6 +22,9 @@ public class Presentar extends ActionBarActivity {
         setContentView(R.layout.activity_presentar);
 
         setTitle("Resumen pedido");
+
+        double precioTotalN = 0;
+        int cantidadTotalN = 0;
 
         TextView numero = (TextView) findViewById(R.id.numeroPedido);
         TextView nombre = (TextView) findViewById(R.id.nombrePresentar);
@@ -48,6 +53,28 @@ public class Presentar extends ActionBarActivity {
         TextView cantidad4 = (TextView) findViewById(R.id.cantidad4Presentar);
         TextView cantidad5 = (TextView) findViewById(R.id.cantidad5Presentar);
         TextView cantidad6 = (TextView) findViewById(R.id.cantidad6Presentar);
+
+        TextView[] precioViews = {
+                precio1,
+                precio2,
+                precio3,
+                precio4,
+                precio5,
+                precio6
+        };
+
+        TextView[] cantidadViews = {
+                cantidad1,
+                cantidad2,
+                cantidad3,
+                cantidad4,
+                cantidad5,
+                cantidad6
+        };
+
+        TextView precioTotal = (TextView) findViewById(R.id.precioTotal);
+        TextView cantidadTotal = (TextView) findViewById(R.id.cantidadTotal);
+        TextView phoneNumber = (TextView) findViewById(R.id.phone_number);
 
         Intent intent = getIntent();
         Pedido pedido = intent.getParcelableExtra("pedido");
@@ -80,6 +107,37 @@ public class Presentar extends ActionBarActivity {
         precio4.setText("$ " + pedido.getPrecios()[3] * pedido.getCantidad4());
         precio5.setText("$ " + pedido.getPrecios()[4] * pedido.getCantidad5());
         precio6.setText("$ " + pedido.getPrecios()[5] * pedido.getCantidad6());
+
+        //Obtener totales
+        for (TextView view : precioViews) {
+            precioTotalN += getDouble(view.getText().toString());
+        }
+
+        for (TextView view : cantidadViews) {
+            cantidadTotalN += Double.parseDouble(view.getText().toString());
+        }
+
+        precioTotal.setText("$ " + precioTotalN);
+        cantidadTotal.setText("" + cantidadTotalN);
+        phoneNumber.setText("Pagar a: " + intent.getStringExtra("phone"));
+
+    }
+
+    private Double getDouble(String number) {
+        String[] splitString;
+        String finalString = "";
+        splitString = number.split("\\$");
+        for (String character : splitString) {
+            finalString += character;
+        }
+        finalString = finalString.trim();
+        //System.out.println("FINAL STRING ====================================> " + finalString);
+
+        return Double.parseDouble(finalString);
+    }
+
+    public void enviarPedido(View view) {
+        Toast.makeText(this, "Pedido enviado!", Toast.LENGTH_LONG).show();
     }
 
 
